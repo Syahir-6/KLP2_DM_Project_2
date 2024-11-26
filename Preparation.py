@@ -37,11 +37,7 @@ print("-" * 50)
 
 # Pastikan gross margin percentage berupa nilai numerik
 if 'gross margin percentage' in data.columns:
-    # Lihat nilai unik terlebih dahulu untuk memastikan data valid
-    print("Nilai unik di gross margin percentage sebelum konversi:")
-    print(data['gross margin percentage'].unique())
-    
-    # Konversi ke numerik (nilai tidak valid akan jadi NaN)
+
     data['gross margin percentage'] = pd.to_numeric(data['gross margin percentage'], errors='coerce')
     
     # Isi nilai NaN dengan rata-rata kolom
